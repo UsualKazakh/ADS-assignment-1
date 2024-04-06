@@ -1,10 +1,12 @@
 public class Problems {
     /**
+     * This method finds the minimum element in an array of integers.
+     * It uses an iterative approach.
+     * Time complexity: O(n), where n is the number of elements in the array.
      *
-     *
-     * @param n The total number of digits
-     * @param array An array containing all numbers
-     * @return The minimum of the giving numbers
+     * @param n     The number of elements in the array.
+     * @param array The array of integers.
+     * @return The minimum element in the array.
      */
     public static int findMin(int n, int[] array){
         if(n==0){
@@ -21,6 +23,15 @@ public class Problems {
         return n;
     }
 
+    /**
+     * This method finds the average of elements in an array of integers.
+     * It uses an iterative approach.
+     * Time complexity: O(n), where n is the number of elements in the array.
+     *
+     * @param n     The number of elements in the array.
+     * @param array The array of integers.
+     * @return The average of elements in the array.
+     */
     public static int findAVG(int n, int[] array){
         if(n==0){
             return 0;
@@ -35,6 +46,14 @@ public class Problems {
         }
     }
 
+    /**
+     * This method checks whether a number is prime or composite.
+     * It uses an iterative approach to check divisibility up to the square root of the number.
+     * Time complexity: O(sqrt(n)), where n is the input number.
+     *
+     * @param n The number to be checked.
+     * @return "Prime" if the number is prime, "Composite" otherwise.
+     */
     public static String checkPrime(int n){
         if (n <= 1){
             return "Composite";
@@ -97,5 +116,17 @@ public class Problems {
         }
     }
 
-    public static
+    public static int binomialCoef(int n, int k){
+        if(k==0 || k==n){
+            return 1;
+        }
+        return binomialCoef(n-1, k-1) + binomialCoef(n-1, k);
+    }
+
+    public static int gcd(int a, int b){
+        if(b==0){
+            return a;
+        }
+        return gcd(b, a%b);
+    }
 }

@@ -76,7 +76,21 @@ public class Main {
                 System.out.println(res8);
                 break;
             case 9:
-
+                System.out.println("Enter n:");
+                int n9 = sc.nextInt();
+                System.out.println("Enter k:");
+                int k9 = sc.nextInt();
+                int res9 = Problems.binomialCoef(n9, k9);
+                System.out.println("binomial coefficent equal to " + res9);
+                break;
+            case 10:
+                System.out.println("Enter first number:");
+                int a = sc.nextInt();
+                System.out.println("Enter second number:");
+                int b = sc.nextInt();
+                int res10 = Problems.gcd(a, b);
+                System.out.println("GCD of " + a + " and " + b + " is " + res10);
+                break;
         }
     }
 }
