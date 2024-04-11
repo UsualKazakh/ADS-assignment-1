@@ -92,6 +92,9 @@ public class Main {
                 System.out.println("GCD of " + a + " and " + b + " is " + res10);
                 break;
         }
+        String word = "aaaaa";
+        boolean res = Problems.polyndrome(word);
+        System.out.println(res);
     }
 }
 

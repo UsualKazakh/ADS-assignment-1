@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Problems {
     /**
      * This method finds the minimum element in an array of integers.
@@ -177,7 +179,28 @@ public class Problems {
         }
         return binomialCoef(n-1, k-1) + binomialCoef(n-1, k);
     }
+    public static boolean polyndrome(String str){
+        if(str.length()<=1){
+            return true;
+        }
+        System.out.println(str.length());
+        char[] arr = new char[str.length()];
+        arr = str.toCharArray();
 
+        if (arr[0] != arr[str.length()-1]){
+            return false;
+        }
+
+        char[] newArr = new char[str.length()-2];
+        for (int i=1; i<str.length()-1; i++){
+            newArr[i-1] = arr[i];
+        }
+
+
+        String newStr = Arrays.toString(newArr);
+
+        return polyndrome(newStr);
+    }
     /**
      * This method calculates the greatest common divisor (GCD) of two numbers using recursion.
      * It uses the Euclidean algorithm to find the GCD.
